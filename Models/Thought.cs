@@ -6,8 +6,11 @@ namespace ThoughtPattern.Models
     public class Thought
     {
         public int ID { get; set; }
+
+        [Required]
         public string Description { get; set; }
-        [DataType(DataType.DateTime)]
+
+        [Display(Name = "Release Date"), DataType(DataType.DateTime)]
         public DateTime ReleaseDate { get; set; }
     }
 }
